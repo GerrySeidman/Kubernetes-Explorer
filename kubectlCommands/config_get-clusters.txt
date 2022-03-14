@@ -1,0 +1,10 @@
+Display clusters defined in the kubeconfig.
+
+Examples:
+  # List the clusters that kubectl knows about
+  kubectl config get-clusters
+
+Usage:
+  kubectl config get-clusters [flags] [options]
+
+Use "kubectl options" for a list of global command-line options (applies to all commands).

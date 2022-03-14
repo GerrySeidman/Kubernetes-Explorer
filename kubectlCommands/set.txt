@@ -1,0 +1,17 @@
+Configure application resources.
+
+ These commands help you make changes to existing application resources.
+
+Available Commands:
+  env            Update environment variables on a pod template
+  image          Update the image of a pod template
+  resources      Update resource requests/limits on objects with pod templates
+  selector       Set the selector on a resource
+  serviceaccount Update the service account of a resource
+  subject        Update the user, group, or service account in a role binding or cluster role binding
+
+Usage:
+  kubectl set SUBCOMMAND [options]
+
+Use "kubectl <command> --help" for more information about a given command.
+Use "kubectl options" for a list of global command-line options (applies to all commands).

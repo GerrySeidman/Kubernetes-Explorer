@@ -1,0 +1,10 @@
+Delete the specified context from the kubeconfig.
+
+Examples:
+  # Delete the context for the minikube cluster
+  kubectl config delete-context minikube
+
+Usage:
+  kubectl config delete-context NAME [options]
+
+Use "kubectl options" for a list of global command-line options (applies to all commands).

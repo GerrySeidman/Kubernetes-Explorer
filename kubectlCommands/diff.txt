@@ -1,0 +1,32 @@
+Diff configurations specified by file name or stdin between the current online configuration, and the configuration as it would be if applied.
+
+ The output is always YAML.
+
+ KUBECTL_EXTERNAL_DIFF environment variable can be used to select your own diff command. Users can use external commands with params too, example: KUBECTL_EXTERNAL_DIFF="colordiff -N -u"
+
+ By default, the "diff" command available in your path will be run with the "-u" (unified diff) and "-N" (treat absent files as empty) options.
+
+ Exit status: 0 No differences were found. 1 Differences were found. >1 Kubectl or diff failed with an error.
+
+ Note: KUBECTL_EXTERNAL_DIFF, if used, is expected to follow that convention.
+
+Examples:
+  # Diff resources included in pod.json
+  kubectl diff -f pod.json
+  
+  # Diff file read from stdin
+  cat service.yaml | kubectl diff -f -
+
+Options:
+      --field-manager='kubectl-client-side-apply': Name of the manager used to track field ownership.
+  -f, --filename=[]: Filename, directory, or URL to files contains the configuration to diff
+      --force-conflicts=false: If true, server-side apply will force the changes against conflicts.
+  -k, --kustomize='': Process the kustomization directory. This flag can't be used together with -f or -R.
+  -R, --recursive=false: Process the directory used in -f, --filename recursively. Useful when you want to manage related manifests organized within the same directory.
+  -l, --selector='': Selector (label query) to filter on, supports '=', '==', and '!='.(e.g. -l key1=value1,key2=value2)
+      --server-side=false: If true, apply runs in the server instead of the client.
+
+Usage:
+  kubectl diff -f FILENAME [options]
+
+Use "kubectl options" for a list of global command-line options (applies to all commands).

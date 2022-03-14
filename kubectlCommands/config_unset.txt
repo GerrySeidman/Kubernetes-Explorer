@@ -1,0 +1,15 @@
+Unset an individual value in a kubeconfig file.
+
+ PROPERTY_NAME is a dot delimited name where each token represents either an attribute name or a map key.  Map keys may not contain dots.
+
+Examples:
+  # Unset the current-context
+  kubectl config unset current-context
+  
+  # Unset namespace in foo context
+  kubectl config unset contexts.foo.namespace
+
+Usage:
+  kubectl config unset PROPERTY_NAME [options]
+
+Use "kubectl options" for a list of global command-line options (applies to all commands).

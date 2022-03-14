@@ -1,0 +1,14 @@
+Mark node as schedulable.
+
+Examples:
+  # Mark node "foo" as schedulable
+  kubectl uncordon foo
+
+Options:
+      --dry-run='none': Must be "none", "server", or "client". If client strategy, only print the object that would be sent, without sending it. If server strategy, submit server-side request without persisting the resource.
+  -l, --selector='': Selector (label query) to filter on
+
+Usage:
+  kubectl uncordon NODE [options]
+
+Use "kubectl options" for a list of global command-line options (applies to all commands).

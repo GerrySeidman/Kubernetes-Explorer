@@ -1,0 +1,39 @@
+Update fields of a resource using strategic merge patch, a JSON merge patch, or a JSON patch.
+
+ JSON and YAML formats are accepted.
+
+Examples:
+  # Partially update a node using a strategic merge patch, specifying the patch as JSON
+  kubectl patch node k8s-node-1 -p '{"spec":{"unschedulable":true}}'
+  
+  # Partially update a node using a strategic merge patch, specifying the patch as YAML
+  kubectl patch node k8s-node-1 -p $'spec:\n unschedulable: true'
+  
+  # Partially update a node identified by the type and name specified in "node.json" using strategic merge patch
+  kubectl patch -f node.json -p '{"spec":{"unschedulable":true}}'
+  
+  # Update a container's image; spec.containers[*].name is required because it's a merge key
+  kubectl patch pod valid-pod -p '{"spec":{"containers":[{"name":"kubernetes-serve-hostname","image":"new image"}]}}'
+  
+  # Update a container's image using a JSON patch with positional arrays
+  kubectl patch pod valid-pod --type='json' -p='[{"op": "replace", "path": "/spec/containers/0/image", "value":"new image"}]'
+
+Options:
+      --allow-missing-template-keys=true: If true, ignore any errors in templates when a field or map key is missing in the template. Only applies to golang and jsonpath output formats.
+      --dry-run='none': Must be "none", "server", or "client". If client strategy, only print the object that would be sent, without sending it. If server strategy, submit server-side request without persisting the resource.
+      --field-manager='kubectl-patch': Name of the manager used to track field ownership.
+  -f, --filename=[]: Filename, directory, or URL to files identifying the resource to update
+  -k, --kustomize='': Process the kustomization directory. This flag can't be used together with -f or -R.
+      --local=false: If true, patch will operate on the content of the file, not the server-side resource.
+  -o, --output='': Output format. One of: json|yaml|name|go-template|go-template-file|template|templatefile|jsonpath|jsonpath-as-json|jsonpath-file.
+  -p, --patch='': The patch to be applied to the resource JSON file.
+      --patch-file='': A file containing a patch to be applied to the resource.
+  -R, --recursive=false: Process the directory used in -f, --filename recursively. Useful when you want to manage related manifests organized within the same directory.
+      --show-managed-fields=false: If true, keep the managedFields when printing objects in JSON or YAML format.
+      --template='': Template string or path to template file to use when -o=go-template, -o=go-template-file. The template format is golang templates [http://golang.org/pkg/text/template/#pkg-overview].
+      --type='strategic': The type of patch being provided; one of [json merge strategic]
+
+Usage:
+  kubectl patch (-f FILENAME | TYPE NAME) [-p PATCH|--patch-file FILE] [options]
+
+Use "kubectl options" for a list of global command-line options (applies to all commands).

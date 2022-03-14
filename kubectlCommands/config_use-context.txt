@@ -1,0 +1,13 @@
+Set the current-context in a kubeconfig file.
+
+Aliases:
+use-context, use
+
+Examples:
+  # Use the context for the minikube cluster
+  kubectl config use-context minikube
+
+Usage:
+  kubectl config use-context CONTEXT_NAME [options]
+
+Use "kubectl options" for a list of global command-line options (applies to all commands).

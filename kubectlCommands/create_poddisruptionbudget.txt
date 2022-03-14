@@ -1,0 +1,31 @@
+Create a pod disruption budget with the specified name, selector, and desired minimum available pods.
+
+Aliases:
+poddisruptionbudget, pdb
+
+Examples:
+  # Create a pod disruption budget named my-pdb that will select all pods with the app=rails label
+  # and require at least one of them being available at any point in time
+  kubectl create poddisruptionbudget my-pdb --selector=app=rails --min-available=1
+  
+  # Create a pod disruption budget named my-pdb that will select all pods with the app=nginx label
+  # and require at least half of the pods selected to be available at any point in time
+  kubectl create pdb my-pdb --selector=app=nginx --min-available=50%
+
+Options:
+      --allow-missing-template-keys=true: If true, ignore any errors in templates when a field or map key is missing in the template. Only applies to golang and jsonpath output formats.
+      --dry-run='none': Must be "none", "server", or "client". If client strategy, only print the object that would be sent, without sending it. If server strategy, submit server-side request without persisting the resource.
+      --field-manager='kubectl-create': Name of the manager used to track field ownership.
+      --max-unavailable='': The maximum number or percentage of unavailable pods this budget requires.
+      --min-available='': The minimum number or percentage of available pods this budget requires.
+  -o, --output='': Output format. One of: json|yaml|name|go-template|go-template-file|template|templatefile|jsonpath|jsonpath-as-json|jsonpath-file.
+      --save-config=false: If true, the configuration of current object will be saved in its annotation. Otherwise, the annotation will be unchanged. This flag is useful when you want to perform kubectl apply on this object in the future.
+      --selector='': A label selector to use for this budget. Only equality-based selector requirements are supported.
+      --show-managed-fields=false: If true, keep the managedFields when printing objects in JSON or YAML format.
+      --template='': Template string or path to template file to use when -o=go-template, -o=go-template-file. The template format is golang templates [http://golang.org/pkg/text/template/#pkg-overview].
+      --validate=true: If true, use a schema to validate the input before sending it
+
+Usage:
+  kubectl create poddisruptionbudget NAME --selector=SELECTOR --min-available=N [--dry-run=server|client|none] [options]
+
+Use "kubectl options" for a list of global command-line options (applies to all commands).

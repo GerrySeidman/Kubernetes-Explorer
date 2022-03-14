@@ -1,0 +1,10 @@
+Display the current-context.
+
+Examples:
+  # Display the current-context
+  kubectl config current-context
+
+Usage:
+  kubectl config current-context [flags] [options]
+
+Use "kubectl options" for a list of global command-line options (applies to all commands).

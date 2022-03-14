@@ -1,0 +1,10 @@
+Delete the specified user from the kubeconfig.
+
+Examples:
+  # Delete the minikube user
+  kubectl config delete-user minikube
+
+Usage:
+  kubectl config delete-user NAME [options]
+
+Use "kubectl options" for a list of global command-line options (applies to all commands).

@@ -1,0 +1,11 @@
+Inspect authorization
+
+Available Commands:
+  can-i       Check whether an action is allowed
+  reconcile   Reconciles rules for RBAC role, role binding, cluster role, and cluster role binding objects
+
+Usage:
+  kubectl auth [flags] [options]
+
+Use "kubectl <command> --help" for more information about a given command.
+Use "kubectl options" for a list of global command-line options (applies to all commands).

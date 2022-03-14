@@ -1,0 +1,11 @@
+List all available plugin files on a user's PATH.
+
+ Available plugin files are those that are: - executable - anywhere on the user's PATH - begin with "kubectl-"
+
+Options:
+      --name-only=false: If true, display only the binary name of each plugin, rather than its full path
+
+Usage:
+  kubectl plugin list [flags] [options]
+
+Use "kubectl options" for a list of global command-line options (applies to all commands).
