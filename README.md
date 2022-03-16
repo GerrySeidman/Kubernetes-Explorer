@@ -14,7 +14,7 @@ While these are great, they are not the ideal format to either quickly find thin
 These HTML pages contain all the information that could be obtained using ```kubectl explain``` command, but  in as interactively expandable trees.
 
 - [Full Kubernetes API Explorer](kubernetesExplorer.html)
-- [Abridged Kuberenetes API Explorer](http://) (less important/deprecated objects and fields are omitted)
+- [Abridged Kuberenetes API Explorer](abridgedKubernetesExplorer.html) (less important/deprecated objects and fields are omitted)
  
 
 ## ```kubectl``` Command Explorer
@@ -28,6 +28,6 @@ The typical way to access get the documentation for these commands is:
 This HTML page is an Explorable version of ```kubectl``` Commands and Sub-Commands
 
 
-- [kubectl Commands](kubectlCommand Explorer)
+- [kubectl Commands](kubectlCommandExplorer.html)
 
     
