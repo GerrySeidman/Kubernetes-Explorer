@@ -25,8 +25,9 @@ The typical way to access get the documentation for these commands is:
 
 - ```kubectl``` \<comand> [\<sub-command>] --help
 
-An HTML Explorable version will be posted 'soon', but in the mean time, the 'help' for all kubectl commands and sub-commands can be found here:
+This HTML page is an Explorable version of ```kubectl``` Commands and Sub-Commands
 
-- [kubectl Commands](kubectlCommands)
+
+- [kubectl Commands](kubectlCommand Explorer)
 
     
