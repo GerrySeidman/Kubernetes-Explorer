@@ -11,10 +11,12 @@ The typical way to access descriptions and documentation for these are:
 
 While these are great, they are not the ideal format to either quickly find things or to explore the Kubernetes API objects
 
-These HTML pages contain all the information that could be obtained using ```kubectl explain``` command, but  in as interactively expandable trees.
+These HTML pages contain all the information that could be obtained using ```kubectl explain``` command, but  in as interactively expandable trees. It is best to use The "Abridged" version unless you are diving deep into the API Objects
 
-- [Full Kubernetes API Explorer](kubernetesExplorer.html)
-- [Abridged Kuberenetes API Explorer](abridgedKubernetesExplorer.html) (less important/deprecated objects and fields are omitted)
+- Full Kubernetes API Explorer
+    - kubernetesExplorer.html<BR><BR>
+- Abridged Kuberenetes API Explorer (less important/deprecated objects and fields are omitted)
+    - abridgedKubernetesExplorer.html
  
 
 ## ```kubectl``` Command Explorer
